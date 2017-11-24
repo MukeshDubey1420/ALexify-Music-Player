@@ -46,16 +46,15 @@ function toggleSong() {
   if(song.paused == true) {
 	   // code For play The Song
     console.log('Music is Playing');
-	song.play();
     $('.play-icon').removeClass('fa-play').addClass('fa-pause');
+	song.play();
     
    }
    else {
 	    // code for pause the song
     console.log('Music is Paused');
-	 song.pause();
     $('.play-icon').removeClass('fa-pause').addClass('fa-play');
-   
+   	 song.pause();
    }
 }
 
@@ -193,9 +192,8 @@ function setupApp() {
     var songs = [] ;
 	$('.total-songs').text("Songs: " + songs.length);
     function fetchSongs() {
-
       $.ajax({
-        'url': 'https://jsonbin.io/b/5a15838d52cfe066fb2b7020',
+        'url': 'https://jsonbin.io/5a1837635b7c7c672ba7c30a',
         'dataType': 'json',
         'method': 'GET',
         'success': function (responseData) {
@@ -203,7 +201,7 @@ function setupApp() {
 		  setupApp() ;
 		   $('.total-songs').text("Total Songs in the Playlist is :- " + songs.length);
         },
-            error: function (responseData) {
+          error: function (responseData) {
                 alert("Sorry Response From Backend could not be fetched !! Server Connection Issue !! please try again ..");
                 
             }
@@ -396,7 +394,7 @@ $('#volumeslider').on('mousemove',function() {
     setvolume();
 });
 
-
+/*
 $('.play-all').on('click', function(){
     var audio = document.querySelector('audio');
     console.log(audio);
@@ -411,7 +409,8 @@ $('.play-all').on('click', function(){
     toggleSong();
 });
 
-
+*/
+/*
  $('.play-all').on('click', function(){
           $('.click').addClass('fa-pause-circle').removeClass('fa-play-circle');
           var audio = document.querySelector('audio');
@@ -454,3 +453,5 @@ $('.play-all').on('click', function(){
 
           
         });
+		
+		*/

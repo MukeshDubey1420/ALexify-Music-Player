@@ -1,65 +1,66 @@
 [
-{
-"image": "https://i.imgur.com/eJZZtOY.jpg",
-"name": "3 Peg - Sharry Mann (DjPunjab.Com)",
-"artist": "Sharry Mann",
-"album": "3 PeG",
-"duration": "3:24",
-"videoLink": "https://www.youtube.com/watch?v=hzTg4zPBtDU",
-"lyricsLink": "http://www.lyricsted.com/3-peg-lyrics-sharry-mann/",
-"fileName": "http://320.raaghd.net/423663a/3_Peg-Sharry_Mann(Mp3Hug.Com).mp3"
-},
-{
-"image": "https://i.imgur.com/5RG4KSM.jpg",
-"name": "Affair - MC JD (DJJOhAL.Com)",
-"artist": "Elly Mangat Ft. MC JD",
-"album": "PB 26",
-"duration": "3:54",
-"videoLink": "https://www.youtube.com/watch?v=ub1KYohsRzU",
-"lyricsLink": "http://www.lyricsted.com/affair-lyrics-elly-mangat/",
-"fileName": "http://sd2.djring.com/128/466940/Affair(DJJOhAL.Com).mp3"
-},
-{
-"image": "https://i.imgur.com/WBzxq5e.jpg",
-"name": "Daang Mankirt Aulakh",
-"artist": "Mankirat Aulakh",
-"album": "Daang",
-"duration": "3:41",
-"videoLink": "https://www.youtube.com/watch?v=7MxiQ4v0EnE",
-"lyricsLink": "http://www.lyricsted.com/daang-lyrics-mankirt-aulakh/",
-"fileName": "http://sd2.djring.com/128/486339/(DJJOhAL.Com).mp3"
-},
-{
-"image": "https://i.imgur.com/nvtRfps.jpg",
-"name": "Set Jatt - Joban Sandhu (DjPunjab.Com)",
-"artist": "Joban Sandhu",
-"album": "Set Jatt",
-"duration": "3:55",
-"videoLink": "https://www.youtube.com/watch?v=VH6Flhma1OI",
-"lyricsLink": "http://www.lyricshawa.com/2017/10/set-jatt-lyrics-joban-sandhu/",
-"fileName": "http://sd2.djring.com/128/485793/(DJJOhAL.Com).mp3"
-},
-{
-"image": "https://i.imgur.com/2liw5L4.jpg",
-"name": "Chalti Hai Kya 9 Se 12-(Mr-Jatt.com)",
-"artist": "Devi Negi Ft. Neha Kakkar",
-"album": "Judwaa 2",
-"duration": "4:35",
-"videoLink": "https://www.youtube.com/watch?v=UVbcaG2tfSE",
-"lyricsLink": "http://www.lyricsted.com/chalti-hai-kya-9-se-12-lyrics-judwaa-2/",
-"fileName": "https://dl.jatt.link/cdn9.jatt.link/f2462c476ab938e5775799f3235e9e45/evnzv/Chalti Hai Kya 9 Se 12-(Mr-Jatt.com).mp3"
-},
-{
-"image": "https://i.imgur.com/thZ2trx.jpg",
-"name": "Ban Ja Rani Guru Randhawa ",
-"artist": "Guru Randhawa",
-"album": "Tumhari Sulu",
-"duration": "3:46",
-"videoLink": "https://www.youtube.com/watch?v=hlvbDjksdCg",
-"lyricsLink": "http://www.lyricsted.com/tu-meri-rani-guru-randhawa/",
-"fileName": "https://dl.jatt.link/cdn9.jatt.link/9a71fa5867b0b925fb9397ac6728f07b/djszv/Ban Ja Rani-(Mr-Jatt.com).mp3"
-}
+   {
+      "image":"https://i.imgur.com/eJZZtOY.jpg",
+      "name":"3 Peg - Sharry Mann (DjPunjab.Com)",
+      "artist":"Sharry Mann",
+      "album":"3 PeG",
+      "duration":"3:15",
+      "videoLink":"https://www.youtube.com/watch?v=hzTg4zPBtDU",
+      "lyricsLink":"http://www.lyricsted.com/3-peg-lyrics-sharry-mann/",
+      "fileName":"https://dl.jatt.link/cdn8.jatt.link/0b987ea759b397e7b2cad915ff8d6346/fbkzv/3 Peg-(Mr-Jatt.com).mp3"
+   },
+   {
+      "image":"https://i.imgur.com/5RG4KSM.jpg",
+      "name":"Affair - MC JD (DJJOhAL.Com)",
+      "artist":"Elly Mangat Ft. MC JD",
+      "album":"PB 26",
+      "duration":"3:54",
+      "videoLink":"https://www.youtube.com/watch?v=ub1KYohsRzU",
+      "lyricsLink":"http://www.lyricsted.com/affair-lyrics-elly-mangat/",
+      "fileName":"http://sd2.djring.com/128/466940/Affair(DJJOhAL.Com).mp3"
+   },
+   {
+      "image":"https://i.imgur.com/WBzxq5e.jpg",
+      "name":"Daang Mankirt Aulakh",
+      "artist":"Mankirat Aulakh",
+      "album":"Daang",
+      "duration":"3:41",
+      "videoLink":"https://www.youtube.com/watch?v=7MxiQ4v0EnE",
+      "lyricsLink":"http://www.lyricsted.com/daang-lyrics-mankirt-aulakh/",
+      "fileName":"http://sd2.djring.com/128/486339/(DJJOhAL.Com).mp3"
+   },
+   {
+      "image":"https://i.imgur.com/nvtRfps.jpg",
+      "name":"Set Jatt - Joban Sandhu (DjPunjab.Com)",
+      "artist":"Joban Sandhu",
+      "album":"Set Jatt",
+      "duration":"3:55",
+      "videoLink":"https://www.youtube.com/watch?v=VH6Flhma1OI",
+      "lyricsLink":"http://www.lyricshawa.com/2017/10/set-jatt-lyrics-joban-sandhu/",
+      "fileName":"http://sd2.djring.com/128/485793/(DJJOhAL.Com).mp3"
+   },
+   {
+      "image":"https://i.imgur.com/2liw5L4.jpg",
+      "name":"Chalti Hai Kya 9 Se 12-(Mr-Jatt.com)",
+      "artist":"Devi Negi Ft. Neha Kakkar",
+      "album":"Judwaa 2",
+      "duration":"4:35",
+      "videoLink":"https://www.youtube.com/watch?v=UVbcaG2tfSE",
+      "lyricsLink":"http://www.lyricsted.com/chalti-hai-kya-9-se-12-lyrics-judwaa-2/",
+      "fileName":"https://dl.jatt.link/cdn9.jatt.link/f2462c476ab938e5775799f3235e9e45/evnzv/Chalti Hai Kya 9 Se 12-(Mr-Jatt.com).mp3"
+   },
+   {
+      "image":"https://i.imgur.com/thZ2trx.jpg",
+      "name":"Ban Ja Rani Guru Randhawa ",
+      "artist":"Guru Randhawa",
+      "album":"Tumhari Sulu",
+      "duration":"3:46",
+      "videoLink":"https://www.youtube.com/watch?v=hlvbDjksdCg",
+      "lyricsLink":"http://www.lyricsted.com/tu-meri-rani-guru-randhawa/",
+      "fileName":"https://dl.jatt.link/cdn9.jatt.link/9a71fa5867b0b925fb9397ac6728f07b/djszv/Ban Ja Rani-(Mr-Jatt.com).mp3"
+   }
 ]
 
+link >>>>https://jsonbin.io/5a1837635b7c7c672ba7c30a
 
-link .... https://jsonbin.io/b/5a15838d52cfe066fb2b7020
+ 
