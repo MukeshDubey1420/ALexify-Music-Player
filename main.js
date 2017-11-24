@@ -193,7 +193,7 @@ function setupApp() {
 	$('.total-songs').text("Songs: " + songs.length);
     function fetchSongs() {
       $.ajax({
-        'url': 'https://jsonbin.io/5a1837635b7c7c672ba7c30a',
+        'url': 'https://jsonbin.io/b/5a184cf65b7c7c672ba7c30e',
         'dataType': 'json',
         'method': 'GET',
         'success': function (responseData) {

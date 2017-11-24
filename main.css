@@ -365,4 +365,5 @@ input[type=range]:focus::-ms-fill-upper {
 .total-songs{
     margin-bottom: 18px;
 	font-size:20px;
+	cursor:pointer;
 }
