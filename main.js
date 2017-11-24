@@ -186,23 +186,30 @@ function setupApp() {
   }
 }
     
+$(document).ready(function () {
+    
 
     // Empty the songs variable
     var songs = [] ;
     function fetchSongs() {
 
       $.ajax({
-        'url': 'https://jsonbin.io/b/5a15838d52cfe066fb2b7020',
+        'url': 'https://jsonbin.io/5a180b21739a5766fa4080f6',
         'dataType': 'json',
         'method': 'GET',
         'success': function (responseData) {
             songs = responseData ;
 		  setupApp() ;
-        }
+        },
+		,
+            error: function (responseData) {
+                alert("Sorry song could not be fetched !! please try again ..");
+                
+            }
       }) ;
 
     }
-
+}
 
 function doSomething() {
         var name = $('#name-input').val();
