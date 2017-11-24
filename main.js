@@ -46,14 +46,16 @@ function toggleSong() {
   if(song.paused == true) {
 	   // code For play The Song
     console.log('Music is Playing');
+	song.play();
     $('.play-icon').removeClass('fa-play').addClass('fa-pause');
-    song.play();
+    
    }
    else {
 	    // code for pause the song
     console.log('Music is Paused');
+	 song.pause();
     $('.play-icon').removeClass('fa-pause').addClass('fa-play');
-    song.pause();
+   
    }
 }
 
@@ -185,31 +187,30 @@ function setupApp() {
     addSongNameClickEvent(obj,i+1) ;
   }
 }
-    
-$(document).ready(function () {
-    
+   
 
     // Empty the songs variable
     var songs = [] ;
+	$('.total-songs').text("Songs: " + songs.length);
     function fetchSongs() {
 
       $.ajax({
-        'url': 'https://jsonbin.io/5a180b21739a5766fa4080f6',
+        'url': 'https://jsonbin.io/b/5a15838d52cfe066fb2b7020',
         'dataType': 'json',
         'method': 'GET',
         'success': function (responseData) {
             songs = responseData ;
 		  setupApp() ;
+		   $('.total-songs').text("Total Songs in the Playlist is :- " + songs.length);
         },
-		,
             error: function (responseData) {
-                alert("Sorry song could not be fetched !! please try again ..");
+                alert("Sorry Response From Backend could not be fetched !! Server Connection Issue !! please try again ..");
                 
             }
       }) ;
 
     }
-}
+
 
 function doSomething() {
         var name = $('#name-input').val();
@@ -394,3 +395,62 @@ $('.fa-volume-up ').toggleClass('disabled')
 $('#volumeslider').on('mousemove',function() {
     setvolume();
 });
+
+
+$('.play-all').on('click', function(){
+    var audio = document.querySelector('audio');
+    console.log(audio);
+    var currentsong = audio.src;
+    var currentTime = Math.floor(audio.currentTime);
+    var duration = Math.floor(audio.duration);
+    audio.play();
+    if (currentTime == duration) {
+
+    }
+
+    toggleSong();
+});
+
+
+ $('.play-all').on('click', function(){
+          $('.click').addClass('fa-pause-circle').removeClass('fa-play-circle');
+          var audio = document.querySelector('audio');
+          i = 0;
+          var playlist = songs;
+          var gn = [{"album": "3 PeG",
+"artist": "Sharry Mann",
+"name": "3 Peg - Sharry Mann (DjPunjab.Com)",
+"image": "https://i.imgur.com/eJZZtOY.jpg"},
+          {"album": "PB 26",
+"artist": "Elly Mangat Ft. MC JD",
+"name": "Affair - MC JD (DJJOhAL.Com)",
+"image": "https://i.imgur.com/5RG4KSM.jpg"},
+          {"album": "Daang",
+"artist": "Mankirat Aulakh",
+"name": "Daang Mankirt Aulakh",
+"image": "https://i.imgur.com/WBzxq5e.jpg"},
+          {"album": "Set Jatt",
+"artist": "Joban Sandhu",
+"name": "Set Jatt - Joban Sandhu (DjPunjab.Com)",
+"image": "https://i.imgur.com/nvtRfps.jpg"},
+          {"album": "Judwaa 2",
+"artist": "Devi Negi Ft. Neha Kakkar",
+"name": "Chalti Hai Kya 9 Se 12-(Mr-Jatt.com)",
+"image": "https://i.imgur.com/2liw5L4.jpg"},
+          {"album": "Tumhari Sulu",
+"artist": "Guru Randhawa",
+"name": "Ban Ja Rani Guru Randhawa ",
+"image": "https://i.imgur.com/thZ2trx.jpg"}];
+          audio.addEventListener('ended', function () {
+          i = ++i < playlist.length ? i : 0;
+          console.log(i)
+          audio.src = playlist[i];
+          audio.play();
+          }, true);
+          audio.volume = 0.3;
+          audio.loop = false;
+          audio.src = playlist[0];
+          audio.play();
+
+          
+        });
