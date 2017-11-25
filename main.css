@@ -361,9 +361,3 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
-
-.total-songs{
-    margin-bottom: 18px;
-	font-size:20px;
-	cursor:pointer;
-}

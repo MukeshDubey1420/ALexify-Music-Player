@@ -10,7 +10,31 @@ var songNumber=1; //initial song number
 
 document.getElementById("demo").innerHTML = new Date().toLocaleDateString("en-EN", {weekday: "long", year: "numeric", month: "short",  
     day: "numeric", hour: "2-digit", minute: "2-digit"  });
+/*
+$('.welcome-screen button').on('click', function() {
+        var name = $('#name-input').val();
+        if (name.length > 3) {
+            var message = "Welcome, " + name;
+			console.log(message);
+            $('.main .user-name').text(message);
+            $('.welcome-screen').addClass('hidden');
+            $('.main').removeClass('hidden');
+			$('.play-icon').on('click', function() {
+  toggleSong();
+});
+ $('body').on('keypress',function(event) {
+	  if (event.keyCode == 32 || event.keyCode == 80 || event.keyCode == 112)
+	  {
+		toggleSong();
+	  }
+	}); 
+         else {
+            $('#name-input').addClass('error');
+			 alert ("Please Enter Your Name To Further Access (3 Character atleast required) !!!");
+        }
+    });
 
+*/
 
 //to mute the song mute function is there
 
@@ -44,19 +68,46 @@ function toggleSong() {
   var song = document.querySelector('audio');
 // it check wheather the Song status paused or not if paused it plays if not it paused.
   if(song.paused == true) {
-	   // code For play The Song
+	   // code For paly The Song
     console.log('Music is Playing');
     $('.play-icon').removeClass('fa-play').addClass('fa-pause');
-	song.play();
-    
+    song.play();
    }
    else {
 	    // code for pause the song
     console.log('Music is Paused');
     $('.play-icon').removeClass('fa-pause').addClass('fa-play');
-   	 song.pause();
+    song.pause();
    }
 }
+
+function doSomething() {
+        var name = $('#name-input').val();
+        if (name.length > 3) {
+            var message = "WELCOME, " + name.toUpperCase();
+			console.log(message);
+            $('.main .user-name').text(message);
+            $('.welcome-screen').addClass('hidden');
+            $('.main').removeClass('hidden');
+			// code for calling the function when .play-icon class button is press
+			$('.play-icon').on('click', function() {
+				toggleSong();
+		});
+		//code for Calling the function when the spacebar(32)and P(80) or p(112) is pressed from keyboard
+		$('body').on('keypress',function(event) {
+	  if (event.keyCode == 32 || event.keyCode == 80 || event.keyCode == 112)
+	  {
+		toggleSong();
+	  }
+		});
+		}
+		else {
+            $('#name-input').addClass('error');
+			 alert ("Please Enter Your Name To Further Access (3 Character atleast required) !!!");
+        }
+		
+	}
+        
 
 	$("#name-input").keyup(function(event) {
     if (event.keyCode === 13) {
@@ -64,6 +115,48 @@ function toggleSong() {
     }
 });
 
+
+
+
+// Code For Implementing Submit Action By pressing Enter.....
+/*
+$(document).ready(function() {
+
+  $('#name-input').keypress(function(event) {
+    // enter has keyCode = 13, change it if you want to use another button
+     if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+        var name = $('#name-input').val();
+        if (name.length > 3) {
+            var message = "Welcome, " + name;
+			console.log(message);
+            $('.main .user-name').text(message);
+            $('.welcome-screen').addClass('hidden');
+            $('.main').removeClass('hidden');
+			$('.play-icon').on('click', function() {
+  toggleSong();
+});
+	 }}
+    
+  });
+
+}); 
+
+
+
+
+
+	 $('body').on('keypress',function(event) {
+	  if (event.keyCode == 32 || event.keyCode == 80 || event.keyCode == 112)
+	  {
+		toggleSong();
+	  }
+	}); 
+        } else {
+            $('#name-input').addClass('error');
+			 alert ("Please Enter Your Name To Further Access (3 Character atleast required) !!!");
+        }
+    });
+	*/
 
 
 	 // javascript function for converting a bulks seconds into a standandard time format
@@ -122,6 +215,15 @@ function addSongNameClickEvent(songObj,position) {
 });
 }
 
+
+
+
+// // code for jump the song and text go for next
+// function timeJump() {
+//     var song = document.querySelector('audio')
+//     song.currentTime = song.duration - 5;
+// }
+
 // play for next song when 1 song ended
 $('audio').on('ended',function() {
     var audio = document.querySelector('audio');
@@ -154,28 +256,129 @@ $('audio').on('ended',function() {
 })
 
 
+/*
+for (var i = 0; i < fileNames.length ; i++) {
+    addSongNameClickEvent(fileNames[i],i+1)
+}
 
+*/
+ 
+ 
+	
+ /* $('body').on('keypress',function(event){
+    var target = event.target;
+                            if (event.keyCode == 32 && target.tagName !='INPUT'){
+      toggleSong();
+   } 
+});
+ */
  
  //function for changing current song details when ever songs chnages
  function changeCurrentSongDetails(songObj) {
-  $('.current-song-image').attr('src','' + songObj.image) ;  //code for using jQuery to select the element with class 'current-song-image' and dynamically adding images in the somgs plalyed
+  $('.current-song-image').attr('src','img/' + songObj.image) ;  //code for using jQuery to select the element with class 'current-song-image' and dynamically adding images in the somgs plalyed
   $('.current-song-name').text(songObj.name) ;
   $('.current-song-album').text(songObj.album) ;
 }
+ /*
+ var songList = ['3 Peg - Sharry Mann (DjPunjab.Com)','Affair - MC JD (DjPunjab.Com)','Daang Mankirt Aulakh','Set Jatt - Joban Sandhu (DjPunjab.Com)','Chalti Hai Kya 9 Se 12-(Mr-Jatt.com)','Ban Ja Rani Guru Randhawa ' ]; 
+
+var fileNames = ['song1.mp3','song2.mp3','song3.mp3','song4.mp3','song5.mp3','song6.mp3'];
+	  
+var artistList = ['Artist #1', 'Artist #2','Artist #3','Artist #4','Artist #5','Artist #6']; 
+	
+var durationList = ['2:56','3:15','2:34','2:29','2:34','2:29'];	
+
+var albumList = ['Badrinath ki Dulhania','Ok Jaanu','Befikre', 'Ae Dil Hai Mushkil' ,'Befikre', 'Ae Dil Hai Mushkil'];
+*/
 
 
 
+// Array of objects for storing the Song details
 
-function setupApp() {
-  changeCurrentSongDetails(songs[0]);
+// ---------------------------------- Songs are Added---------------------------------
+var songs = [
+  {
+    'name': '3 Peg - Sharry Mann (DjPunjab.Com)',
+    'artist': 'Sharry Mann',
+    'album': '3 PeG',
+    'duration': '3:24',
+   'fileName': 'song1.mp3',
+   'image': 'song1.jpg'
+  },
+  {
+    'name': 'Affair - MC JD (DjPunjab.Com)',
+    'artist': 'Elly Mangat Ft. MC JD',
+    'album': 'PB 26',
+    'duration': '3:54',
+    'fileName': 'song2.mp3',
+   'image': 'song2.jpg'
+  }
+  ,
+  {
+    'name': 'Daang Mankirt Aulakh',
+    'artist': 'Mankirat Aulakh',
+    'album': 'Daang ',
+    'duration': '3:41',
+    'fileName': 'song3.mp3',
+   'image': 'song3.jpg'
+  }
+  ,
+  {
+    'name': 'Set Jatt - Joban Sandhu (DjPunjab.Com)',
+    'artist': 'Joban Sandhu',
+    'album': 'Set Jatt',
+    'duration': '1:09',
+    'fileName': 'song4.mp3',
+   'image': 'song4.jpg'
+  }
+  ,
+  {
+    'name': 'Chalti Hai Kya 9 Se 12-(Mr-Jatt.com)',
+    'artist': 'Devi Negi Ft. Neha Kakkar',
+    'album': 'Judwaa 2',
+    'duration': '4:35',
+    'fileName': 'song5.mp3',
+   'image': 'song5.jpg'
+  }
+  ,
+  {
+    'name': 'Ban Ja Rani Guru Randhawa ',
+    'artist': 'Guru Randhawa',
+    'album': 'Tumhari Sulu',
+    'duration': '1:33',
+    'fileName': 'song6.mp3',
+   'image': 'song6.jpg'
+  }
+]
 
-  setInterval(function() {
-    updateCurrentTime() ;
-	updateTimer();
-  }) ;
+//whenever the html document is loaded , only after that , run this function
 
+window.onload = function() {
+	changeCurrentSongDetails(songs[0]);
+	/*
+	$('#song1 .song-name').text(songList[0]);
+	$('#song2 .song-name').text(songList[1]);
+	$('#song3 .song-name').text(songList[2]);
+	$('#song4 .song-name').text(songList[3]);
+	$('#song5 .song-name').text(songList[4]);
+	$('#song6 .song-name').text(songList[5]);
+	$('#song1 .song-artist').text(artistList[0]);
+	$('#song2 .song-artist').text(artistList[1]);
+	$('#song3 .song-artist').text(artistList[2]);
+	$('#song4 .song-artist').text(artistList[3]);
+	$('#song5 .song-artist').text(artistList[4]);
+	$('#song6 .song-artist').text(artistList[5]);
 
-  for(var i =0; i < songs.length;i++) {
+for(var i =0; i < songList.length;i++) {
+    var name = '#song' + (i+1);
+    var song = $(name);
+    song.find('.song-name').text(songList[i]);
+    song.find('.song-artist').text(artistList[i]);
+    song.find('.song-album').text(albumList[i]); // Added
+    song.find('.song-length').text(durationList[i]); // Added
+  }
+ */
+ for(var i =0; i < songs.length;i++) {
     var obj = songs[i];
     var name = '#song' + (i+1);
     var song = $(name);
@@ -183,79 +386,102 @@ function setupApp() {
     song.find('.song-artist').text(obj.artist);
     song.find('.song-album').text(obj.album);
     song.find('.song-length').text(obj.duration);
-    addSongNameClickEvent(obj,i+1) ;
+    addSongNameClickEvent(obj,i+1) ;  //function call by passing object value and position information
   }
-}
-   
+ /* 
+ $('#song1').click(function() {
+  var audio = document.querySelector('audio');
+  var currentSong = audio.src;
+  if(currentSong.search(fileNames[0]) != -1)
+  {
+    toggleSong();
+  }
+  else {
+    audio.src = fileNames[0];
+    toggleSong();
+  }
+});
+$('#song2').click(function() {
+  var audio = document.querySelector('audio');
+  var currentSong = audio.src;
+  if(currentSong.search(fileNames[1]) != -1)
+  {
+    toggleSong();
+  }
+  else {
+    audio.src = fileNames[1];
+    toggleSong();
+  }
+});
+$('#song3').click(function() {
+  var audio = document.querySelector('audio');
+  var currentSong = audio.src;
+  if(currentSong.search(fileNames[2]) != -1)
+  {
+    toggleSong();
+  }
+  else {
+    audio.src = fileNames[2];
+    toggleSong();
+  }
+});
+$('#song4').click(function() {
+  var audio = document.querySelector('audio');
+  var currentSong = audio.src;
+  if(currentSong.search(fileNames[3]) != -1)
+  {
+    toggleSong();
+  }
+  else {
+    audio.src = fileNames[3];
+    toggleSong();
+  }
+});
+$('#song5').click(function() {
+  var audio = document.querySelector('audio');
+  var currentSong = audio.src;
+  if(currentSong.search(fileNames[4]) != -1)
+  {
+    toggleSong();
+  }
+  else {
+    audio.src = fileNames[4];
+    toggleSong();
+  }
+});
+$('#song6').click(function() {
+  var audio = document.querySelector('audio');
+  var currentSong = audio.src;
+  if(currentSong.search(fileNames[5]) != -1)
+  {
+    toggleSong();
+  }
+  else {
+    audio.src = fileNames[5];
+    toggleSong();
+  }
+  
+});
+*/
+  updateCurrentTime();
 
-    // Empty the songs variable
-    var songs = [] ;
-	$('.total-songs').text("Songs: " + songs.length);
-    function fetchSongs() {
-      $.ajax({
-        'url': 'https://jsonbin.io/b/5a184cf65b7c7c672ba7c30e',
-        'dataType': 'json',
-        'method': 'GET',
-        'success': function (responseData) {
-            songs = responseData ;
-		  setupApp() ;
-		   $('.total-songs').text("Total Songs in the Playlist is :- " + songs.length);
-        },
-          error: function (responseData) {
-                alert("Sorry Response From Backend could not be fetched !! Server Connection Issue !! please try again ..");
-                
-            }
-      }) ;
+  setInterval(function() {
+    updateCurrentTime();
+	updateTimer();
+  },1000);
+  
+};
 
-    }
-
-
-function doSomething() {
-        var name = $('#name-input').val();
-        if (name.length > 3) {
-            var message = "WELCOME, " + name.toUpperCase();
-			console.log(message);
-            $('.main .user-name').text(message);
-            $('.welcome-screen').addClass('hidden');
-            $('.main').removeClass('hidden');
-			  fetchSongs() ;
-			// code for calling the function when .play-icon class button is press
-			$('.play-icon').on('click', function() {
-				toggleSong();
-				
-		});
-		//code for Calling the function when the spacebar(32)and P(80) or p(112) is pressed from keyboard
-		$('body').on('keypress',function(event) {
-	  if (event.keyCode == 32 || event.keyCode == 80 || event.keyCode == 112)
-	  {
-		toggleSong();
-	  }
-		});
-		}
-		else {
-            $('#name-input').addClass('error');
-			 alert ("Please Enter Your Name To Further Access (3 Character atleast required) !!!");
-        }
-		
-	}
-
-
-
-			// code for calling the function when .play-icon class button is press
-			$('.play-icon').on('click', function() {
-				
-				
-		});
-
-
-
-
-
-
-
-
-
-
+/*
+//whenever the html document is loaded , only after that , run this function
+            window.onload = function() {
+                changeCurrentSongDetails(songs[0]);
+                updateCurrentTime();
+                setInterval(function() {
+                    updateCurrentTime();
+                    updateTimer();
+                  },1000);
+*/
 
 document.onkeydown = function(e) {
 if(event.keyCode == 123) {
@@ -393,65 +619,3 @@ $('.fa-volume-up ').toggleClass('disabled')
 $('#volumeslider').on('mousemove',function() {
     setvolume();
 });
-
-/*
-$('.play-all').on('click', function(){
-    var audio = document.querySelector('audio');
-    console.log(audio);
-    var currentsong = audio.src;
-    var currentTime = Math.floor(audio.currentTime);
-    var duration = Math.floor(audio.duration);
-    audio.play();
-    if (currentTime == duration) {
-
-    }
-
-    toggleSong();
-});
-
-*/
-/*
- $('.play-all').on('click', function(){
-          $('.click').addClass('fa-pause-circle').removeClass('fa-play-circle');
-          var audio = document.querySelector('audio');
-          i = 0;
-          var playlist = songs;
-          var gn = [{"album": "3 PeG",
-"artist": "Sharry Mann",
-"name": "3 Peg - Sharry Mann (DjPunjab.Com)",
-"image": "https://i.imgur.com/eJZZtOY.jpg"},
-          {"album": "PB 26",
-"artist": "Elly Mangat Ft. MC JD",
-"name": "Affair - MC JD (DJJOhAL.Com)",
-"image": "https://i.imgur.com/5RG4KSM.jpg"},
-          {"album": "Daang",
-"artist": "Mankirat Aulakh",
-"name": "Daang Mankirt Aulakh",
-"image": "https://i.imgur.com/WBzxq5e.jpg"},
-          {"album": "Set Jatt",
-"artist": "Joban Sandhu",
-"name": "Set Jatt - Joban Sandhu (DjPunjab.Com)",
-"image": "https://i.imgur.com/nvtRfps.jpg"},
-          {"album": "Judwaa 2",
-"artist": "Devi Negi Ft. Neha Kakkar",
-"name": "Chalti Hai Kya 9 Se 12-(Mr-Jatt.com)",
-"image": "https://i.imgur.com/2liw5L4.jpg"},
-          {"album": "Tumhari Sulu",
-"artist": "Guru Randhawa",
-"name": "Ban Ja Rani Guru Randhawa ",
-"image": "https://i.imgur.com/thZ2trx.jpg"}];
-          audio.addEventListener('ended', function () {
-          i = ++i < playlist.length ? i : 0;
-          console.log(i)
-          audio.src = playlist[i];
-          audio.play();
-          }, true);
-          audio.volume = 0.3;
-          audio.loop = false;
-          audio.src = playlist[0];
-          audio.play();
-
-          
-        });
-		
-		*/
